@@ -1,0 +1,71 @@
+<!--
+  Name: Tahmid Ahmed, Tameem Hossain & Tasneem Ahmed
+  Teacher: Ms. Lal
+  Date: June 15th, 2020
+  Program Name: Triple T Stats
+  Program description: Our program is a COVID-19 data hub, displaying COVID-19 statistics in many different forms ranging from charts, to pie to graphs to even maps. Our worldwide data is updated every 15 mins, to give the user the most up to-date information. Our user friendly interface makes it easy for the user to navigate around our website. We have also included a self-assessment to quickly do a COVID-19 check up on yourself. This is in no way a perfect test to assess someone for COVID-19, please talk to your health care provider for a more accurate assessment. With our user friendly interface and up to-date statistics we are truly the ultimate COVID-19 Stats website.
+-->
+
+<!DOCTYPE html>
+<!---->
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+	<div class="container">
+		<!-- Creating Class to call in Css called Container -->
+		<nav class="navbar">
+			<!--Creating class to call in Css called Nav bar-->
+			<ul>
+				<!--Listing the items in the nav bar. "Home, Contact Tracing, Stats, info?"-->
+				<li><a href="#home">Home</a></li>
+				<li><a href="#contact">Maps</a></li>
+				<li><a href="#stats">Graphs</a></li>
+				<li><a href="#selfevaluate">Self-Evaluation</a></li> 
+				<li><a href="#info">Editor's Note</a></li>
+			</ul>
+		</nav>
+		<section id="home">
+			<h1 class="homeHeader"> Triple T Stats </h1>       	   
+      <!--Making the header for the home page-->
+    	<p class="homeP"> A COVID-19 Pandemic response / information network <p>       
+
+		</section>
+		
+    
+		<section id="contact">        
+      <!--Making the header for the home page-->
+      <h1 class ="link"><a href ="contactTracingLoadingPage.html"> COVID-19 Maps</a></h1>
+			<p class = "contactP">Complex mapping archive and data </p>
+		</section>
+		<section id="stats">
+			<h1> <a href ="statsHome.html"> <strong> COVID-19 Graphs </strong> </a> </h1>          	
+      <!--Making the header for the home page-->
+			<p> Take a look at the statistics <p>
+		</section>
+		<section id="selfevaluate"> 
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeo0EL9YQfNPa0QWeLqI7SdJ8I95ThrQZV3pS-cch5FgHYhRg/viewform?embedded=true" width="650" height="650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+		</section>
+
+		<section id="info">
+			<h1>  Editors note  </h1>      <br><br>                 	
+      <!--Making the header for the home page-->
+			<p> The coronavirus has had a tremendous effect on hunmanity. In order to get through these tough times, people must come together and unite in any sort of way to help battle this deadly virus. Our mission with this website is to give people easy access to Corona Virus resources and Statistics that is reliable and accurrate. We even added some intriguing features like a map that shows COVID-19 stats being distributed in regions based on its own subregions. We hope our website can give an easy access for visitors to see reliable Covid-19 data. We also provide links that can help users determine for themselves if they or anyone they know is experiencing any symptoms of COVID-19. Similar to any other severe issues that you should report to officials as immediately as possible, you should also take responsibility to report any health risks as soon as possible. We hope you stay safe throughout this whole perocess, do your part for society, and check our site regularly in order to get a quick, reliable data for your local area, and the world. <p> <br>
+			<form action="https://covid19responsefund.org/en/" method="GET"> 
+				<button class="donation" >Want to make a donation for COVID-19 relief?<br />Click here</button>
+			</form>
+		</section>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+		<script src="backtoTopbtn.js"> </script>
+	</div>
+</body>
+
+</html>
+

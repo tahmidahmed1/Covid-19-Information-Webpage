@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+    <title>Quick Start - Leaflet</title>
+    
+    
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <link href = "contact.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+
+
+	
+</head>
+<body>
+<p><a href="stat1.html"> View in Graphs </a> <p>
+<h1><a href = "contactTracingLoadingPage.html" style="text-decoration: none;"> Covid-19 Mapped</a></h1>
+
+<div id="mapid" style="width: 1583px; height: 670px;"></div><!--use this to change the size of the map wide n hight-->
+<script>
+         
+
+    var mymap = L.map('mapid').setView([65.1304, -97.3468], 2.5);  //creating map and setting its starting state
+
+
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+    }).addTo(mymap); //designing the map
+    
+    //entering data points and co-ordinates
+    L.circle([51.2538, -85.3232],309999, {//Ontario
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<Strong> Ontario </strong> <br \> Confirmed: 27,533 <br \> Recovered: 21,353 <br \> Deaths: 2,247");
+        
+    L.circle([50.8139, -73], 409999, {//Quebec
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<Strong>Quebec</Strong> <br \> Confirmed: 50,651 <br \> Recovered: 16,070 <br \> Deaths: 4,4439");
+    
+    L.circle([48.7, -56], 79999, {//NewFound Land
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<Strong>Newfoundland & Labrador</Strong> <br \> Confirmed: 261 <br \> Recovered: 255 <br \> Deaths: 3");
+    
+    L.circle([46.5653, -66.4619], 69999, {//New Brunswick
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<Strong>New Brunswick</Strong> <br \> Confirmed: 129 <br \> Recovered: 120 <br \> Deaths: 0");
+    
+    L.circle([45.3, -62.5], 99999, {//Nova Scotia
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<Strong>Nova Scotia</Strong> <br \> Confirmed: 1,056 <br \> Recovered: 978 <br \> Deaths: 60");
+    
+    L.circle([46.35, -63.0668], 29999, {//PEI
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<Strong>Prince Edward Island</Strong> <br \> Confirmed: 27 <br \> Recovered: 27 <br \> Deaths: 0");
+    
+    L.circle([52.9399, -105.4509], 109999, {//Saskat
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<Strong>Saskatchewan</strong> <br \> Confirmed: 645 <br \> Recovered: 580 <br \> Deaths: 10");
+    
+    L.circle([54.7609, -97.8139], 169999, { //Manitoba
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<Strong>Manitoba</Strong> <br \> Confirmed: 2941 <br \> Recovered: 278 <br \> Deaths: 7");
+    
+    L.circle([54.9333, -114.5765], 199999, {//Alberta
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<Strong>Alberta</Strong> <br \> Confirmed: 6,992 <br \> Recovered: 6,245 <br \> Deaths: 143");
+    
+    L.circle([53.7267, -123.6476], 169999, {//BC
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<Strong>British Columbia</Strong> <br \> Confirmed: 2,573 <br \> Recovered: 2,181 <br \> Deaths: 164");
+    
+    L.circle([62.8255, -115.8457], 15000, {//North west territory
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<Strong>Northwest Territories</Strong> <br \> Confirmed: 5 <br \> Recovered: 5 <br \> Deaths: 0");
+    
+    L.circle([64.2823, -137], 15000, {//Yukon
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<Strong> Yukon </Strong> <br \> Confirmed: 11 <br \> Recovered: 11 <br \> Deaths: 0");
+    
+    L.circle([65.2998, -95.1076], 15000, {//Nunavut
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+    }).addTo(mymap).bindPopup("<Strong>Nunavut</Strong> <br \> Confirmed: 0 <br \> Recovered: 0 <br \> Deaths: 0");
+
+	
+
+</script>
+
+
+
+</body>
+
+</html>

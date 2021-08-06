@@ -1,0 +1,1633 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script type="text/javascript">
+window.onload = function () {
+//date
+var xAxisList = ["Jan 22","Jan 23","Jan 24","Jan 25","Jan 26","Jan 27","Jan 28","Jan 29","Jan 30","Jan 31","Feb 01","Feb 02","Feb 03","Feb 04","Feb 05","Feb 06","Feb 07","Feb 08","Feb 09","Feb 10","Feb 11","Feb 12","Feb 13","Feb 14","Feb 15","Feb 16","Feb 17","Feb 18","Feb 19","Feb 20","Feb 21","Feb 22","Feb 23","Feb 24","Feb 25","Feb 26","Feb 27","Feb 28","Feb 29","Mar 01","Mar 02","Mar 03","Mar 04","Mar 05","Mar 06","Mar 07","Mar 08","Mar 09","Mar 10","Mar 11","Mar 12","Mar 13","Mar 14","Mar 15","Mar 16","Mar 17","Mar 18","Mar 19","Mar 20","Mar 21","Mar 22","Mar 23","Mar 24","Mar 25","Mar 26","Mar 27","Mar 28","Mar 29","Mar 30","Mar 31","Apr 01","Apr 02","Apr 03","Apr 04","Apr 05","Apr 06","Apr 07","Apr 08","Apr 09","Apr 10","Apr 11","Apr 12","Apr 13","Apr 14","Apr 15","Apr 16","Apr 17","Apr 18","Apr 19","Apr 20","Apr 21","Apr 22","Apr 23","Apr 24","Apr 25","Apr 26","Apr 27","Apr 28","Apr 29","Apr 30","May 01","May 02","May 03","May 04","May 05","May 06","May 07","May 08","May 09","May 10","May 11","May 12","May 13","May 14","May 15","May 16","May 17","May 18","May 19","May 20","May 21","May 22","May 23","May 24","May 25","May 26","May 27","May 28","May 29","May 30","May 31","Jun 01","Jun 02","Jun 03","Jun 04","Jun 05","Jun 06","Jun 07","Jun 08","Jun 09","Jun 10"];
+// total cases
+var yAxisList = [580,845,1317,2015,2800,4581,6058,7813,9823,11950,14553,17391,20630,24545,28266,31439,34876,37552,40553,43099,45134,59287,64438,67100,69197,71329,73332,75184,75700,76677,77673,78651,79205,80087,80828,81820,83108,84615,86605,88585,90447,93018,95324,98418,102059,106117,110013,114448,119019,126335,134594,145527,156512,169543,182470,198246,218983,245162,275874,305366,337843,379469,423363,472100,533205,598060,664940,725584,790012,864229,941687,1022140,1106573,1188365,1259285,1332572,1411180,1496019,1581505,1673711,1753367,1825079,1895521,1968891,2051944,2132952,2218208,2298862,2374486,2448176,2523812,2604070,2689021,2791121,2881533,2955078,3024621,3100170,3180137,3266132,3361305,3444192,3526536,3606039,3687506,3783479,3879928,3976563,4065924,4145975,4220794,4306378,4395823,4492780,4593072,4689879,4772122,4862217,4957412,5060164,5167906,5275936,5375871,5472605,5562645,5655465,5762281,5879114,6005239,6129572,6238550,6343126,6458831,6579321,6709825,6840448,6969185,7082736,7190454,7311573,7447151];
+//total Deaths
+var yAxisList2 = [17,25,41,56,80,106,132,170,213,259,304,362,426,492,565,638,724,813,910,1018,1115,1261,1383,1526,1669,1775,1873,2009,2126,2247,2360,2460,2618,2699,2763,2800,2858,2923,2977,3050,3117,3202,3285,3387,3493,3598,3826,4023,4297,4627,4980,5427,5841,6532,7180,8000,8983,10077,11457,13101,14739,16671,19157,21747,24693,28163,31835,35179,39341,44053,49246,55519,61484,67553,72560,78171,86068,92808,100479,107835,114048,119617,125261,132676,140873,147878,156313,162992,167890,173382,180676,187379,194091,200513,206622,210381,214894,221589,228186,233986,239612,244836,248317,252417,258205,265019,270612,276164,280419,283928,287380,292946,298312,303670,308751,313113,316731,320177,324771,329458,334388,339646,343829,346976,348156,352207,357514,362164,367087,371184,374374,377428,382099,387028,392539,397445,401698,405083,408240,412972,418135];
+//total active cases.
+var yAxisList3 = [563,786,1238,1910,2669,4415,5823,7519,9439,11448,13921,16525,19561,23146,26528,29239,32069,34055,36320,38038,39216,52039,56247,57378,57990,58581,58747,58622,57217,55906,54418,53541,51596,49922,48014,46215,43730,42262,41298,40413,39222,38872,38515,39426,40957,42347,43909,46369,48101,53401,59254,67525,74746,85558,95661,107622,124659,146920,172841,196767,224474,260724,295309,336105,384545,436801,491115,539056,585242,642008,698225,754357,816404,874249,923258,975691,1022894,1071419,1124589,1189622,1236610,1282063,1325549,1357621,1400949,1437953,1490322,1537611,1577801,1625393,1649124,1694371,1743039,1771277,1815641,1861859,1882352,1918584,1944592,1985149,2033010,2069175,2114481,2148347,2177418,2207375,2255828,2304247,2334615,2370529,2404916,2413923,2437547,2483782,2523894,2562065,2594061,2631200,2668210,2701326,2743999,2739251,2775553,2813158,2836559,2858373,2891280,2918992,2972752,3014183,3010189,3055070,3058544,3020212,3063839,3110945,3159162,3220709,3249990,3299843,3298960];
+//total recovered cases.
+var yAxisList4 = [504,643,907,1173,1562,2083,2684,3323,4043,4803,5987,6808,8196,9538,10973,12712,14553,16357,18524,20895,22650,24991,27466,30051,32805,36520,39430,42330,45122,48108,50944,53524,55605,57609,60172,62278,64056,66621,68307,70360,72575,75925,77453,79629,82624,85341,88165,91576,95498,98630,102074,108897,114248,123967,133096,141990,151349,165429,178168,194216,212264,228685,246563,263467,278710,302218,331792,356437,376254,402709,423399,444711,478594,510122,547121,571573,598259,628795,649401,695097,723405,752976,820416,860355,884151,928688,961345,1008764,1048402,1090112,1131634,1165215,1206776,1253445,1312708,1355172,1397897,1452696,1493385,1531203,1602291,1662823,1708264,1763431,1817705,1864334,1913844,1967435,2032384,2092523,2200043,2259493,2315475,2381180,2448401,2517289,2602070,2669847,2749013,2859185,2916248,3023882,3177775,3259141,3337648,3414114,3462534,3537814,3604348,3735733,3840989,3927230,4032601];
+
+var chart1 = new CanvasJS.Chart("coronavirus-cases-linear", {
+	animationEnabled: true,
+	
+	title:{
+		text: "World Statistics on COVID-19 (since Jan.22)"
+	},
+	
+	subtitle: {
+    text: '(Linear Scale)'
+  },
+
+	axisX:{
+    title: "Date"
+  },
+
+	axisY:{
+		title: "Total # of Cases"
+	},
+
+	axisY:{
+		includeZero: true
+	},
+
+	data: [{        
+		type: "line",
+      	indexLabelFontSize: 16,
+		dataPoints: [
+			{label: xAxisList[0], y: yAxisList[0] },
+			{label: xAxisList[1], y: yAxisList[1] },
+			{label: xAxisList[2], y: yAxisList[2] },
+			{label: xAxisList[3], y: yAxisList[3] },
+			{label: xAxisList[4], y: yAxisList[4] },
+			{label: xAxisList[5], y: yAxisList[5] },
+			{label: xAxisList[6], y: yAxisList[6] },
+			{label: xAxisList[7], y: yAxisList[7] },
+			{label: xAxisList[8], y: yAxisList[8] },
+			{label: xAxisList[9], y: yAxisList[9] },
+			{label: xAxisList[10], y: yAxisList[10] },
+			{label: xAxisList[11], y: yAxisList[11] },
+			{label: xAxisList[12], y: yAxisList[12] },
+			{label: xAxisList[13], y: yAxisList[13] },
+			{label: xAxisList[14], y: yAxisList[14] },
+			{label: xAxisList[15], y: yAxisList[15] },
+			{label: xAxisList[16], y: yAxisList[16] },
+			{label: xAxisList[17], y: yAxisList[17] },
+			{label: xAxisList[18], y: yAxisList[18] },
+			{label: xAxisList[19], y: yAxisList[19] },
+			{label: xAxisList[20], y: yAxisList[20] },
+			{label: xAxisList[21], y: yAxisList[21] },
+			{label: xAxisList[22], y: yAxisList[22] },
+			{label: xAxisList[23], y: yAxisList[23] },
+			{label: xAxisList[24], y: yAxisList[24] },
+			{label: xAxisList[25], y: yAxisList[25] },
+			{label: xAxisList[26], y: yAxisList[26] },
+			{label: xAxisList[27], y: yAxisList[27] },
+			{label: xAxisList[28], y: yAxisList[28] },
+			{label: xAxisList[29], y: yAxisList[29] },
+			{label: xAxisList[30], y: yAxisList[30] },
+			{label: xAxisList[31], y: yAxisList[31] },
+			{label: xAxisList[32], y: yAxisList[32] },
+			{label: xAxisList[33], y: yAxisList[33] },
+			{label: xAxisList[34], y: yAxisList[34] },
+			{label: xAxisList[35], y: yAxisList[35] },
+			{label: xAxisList[36], y: yAxisList[36] },
+			{label: xAxisList[37], y: yAxisList[37] },
+			{label: xAxisList[38], y: yAxisList[38] },
+			{label: xAxisList[39], y: yAxisList[39] },
+			{label: xAxisList[40], y: yAxisList[40] },
+			{label: xAxisList[41], y: yAxisList[41] },
+			{label: xAxisList[42], y: yAxisList[42] },
+			{label: xAxisList[43], y: yAxisList[43] },
+			{label: xAxisList[44], y: yAxisList[44] },
+			{label: xAxisList[45], y: yAxisList[45] },
+			{label: xAxisList[46], y: yAxisList[46] },
+			{label: xAxisList[47], y: yAxisList[47] },
+			{label: xAxisList[48], y: yAxisList[48] },
+			{label: xAxisList[49], y: yAxisList[49] },
+			{label: xAxisList[50], y: yAxisList[50] },
+			{label: xAxisList[51], y: yAxisList[51] },
+			{label: xAxisList[52], y: yAxisList[52] },
+			{label: xAxisList[53], y: yAxisList[53] },
+			{label: xAxisList[54], y: yAxisList[54] },
+			{label: xAxisList[55], y: yAxisList[55] },
+			{label: xAxisList[56], y: yAxisList[56] },
+			{label: xAxisList[57], y: yAxisList[57] },
+			{label: xAxisList[58], y: yAxisList[58] },
+			{label: xAxisList[59], y: yAxisList[59] },
+			{label: xAxisList[60], y: yAxisList[60] },
+			{label: xAxisList[61], y: yAxisList[61] },
+			{label: xAxisList[62], y: yAxisList[62] },
+			{label: xAxisList[63], y: yAxisList[63] },
+			{label: xAxisList[64], y: yAxisList[64] },
+			{label: xAxisList[65], y: yAxisList[65] },
+			{label: xAxisList[66], y: yAxisList[66] },
+			{label: xAxisList[67], y: yAxisList[67] },
+			{label: xAxisList[68], y: yAxisList[68] },
+			{label: xAxisList[69], y: yAxisList[69] },
+			{label: xAxisList[70], y: yAxisList[70] },
+			{label: xAxisList[71], y: yAxisList[71] },
+			{label: xAxisList[72], y: yAxisList[72] },
+			{label: xAxisList[73], y: yAxisList[73] },
+			{label: xAxisList[74], y: yAxisList[74] },
+			{label: xAxisList[75], y: yAxisList[75] },
+			{label: xAxisList[76], y: yAxisList[76] },
+			{label: xAxisList[77], y: yAxisList[77] },
+			{label: xAxisList[78], y: yAxisList[78] },
+			{label: xAxisList[79], y: yAxisList[79] },
+			{label: xAxisList[80], y: yAxisList[80] },
+			{label: xAxisList[81], y: yAxisList[81] },
+			{label: xAxisList[82], y: yAxisList[82] },
+			{label: xAxisList[83], y: yAxisList[83] },
+			{label: xAxisList[84], y: yAxisList[84] },
+			{label: xAxisList[85], y: yAxisList[85] },
+			{label: xAxisList[86], y: yAxisList[86] },
+			{label: xAxisList[87], y: yAxisList[87] },
+			{label: xAxisList[88], y: yAxisList[88] },
+			{label: xAxisList[89], y: yAxisList[89] },
+			{label: xAxisList[90], y: yAxisList[90] },
+			{label: xAxisList[91], y: yAxisList[91] },
+			{label: xAxisList[92], y: yAxisList[92] },
+			{label: xAxisList[93], y: yAxisList[93] },
+			{label: xAxisList[94], y: yAxisList[94] },
+			{label: xAxisList[95], y: yAxisList[95] },
+			{label: xAxisList[96], y: yAxisList[96] },
+			{label: xAxisList[97], y: yAxisList[97] },
+			{label: xAxisList[98], y: yAxisList[98] },
+			{label: xAxisList[99], y: yAxisList[99] },
+			{label: xAxisList[100], y: yAxisList[100] },
+			{label: xAxisList[101], y: yAxisList[101] },
+			{label: xAxisList[102], y: yAxisList[102] },
+			{label: xAxisList[103], y: yAxisList[103] },
+			{label: xAxisList[104], y: yAxisList[104] },
+			{label: xAxisList[105], y: yAxisList[105] },
+			{label: xAxisList[106], y: yAxisList[106] },
+			{label: xAxisList[107], y: yAxisList[107] },
+			{label: xAxisList[108], y: yAxisList[108] },
+			{label: xAxisList[109], y: yAxisList[109] },
+			{label: xAxisList[110], y: yAxisList[110] },
+			{label: xAxisList[111], y: yAxisList[111] },
+			{label: xAxisList[112], y: yAxisList[112] },
+			{label: xAxisList[113], y: yAxisList[113] },
+			{label: xAxisList[114], y: yAxisList[114] },
+			{label: xAxisList[115], y: yAxisList[115] },
+			{label: xAxisList[116], y: yAxisList[116] },
+			{label: xAxisList[117], y: yAxisList[117] },
+			{label: xAxisList[118], y: yAxisList[118] },
+			{label: xAxisList[119], y: yAxisList[119] },
+			{label: xAxisList[120], y: yAxisList[120] },
+			{label: xAxisList[121], y: yAxisList[121] },
+			{label: xAxisList[122], y: yAxisList[122] },
+			{label: xAxisList[123], y: yAxisList[123] },
+			{label: xAxisList[124], y: yAxisList[124] },
+			{label: xAxisList[125], y: yAxisList[125] },
+			{label: xAxisList[126], y: yAxisList[126] },
+			{label: xAxisList[127], y: yAxisList[127] },
+			{label: xAxisList[128], y: yAxisList[128] },
+			{label: xAxisList[129], y: yAxisList[129] },
+			{label: xAxisList[130], y: yAxisList[130] },
+			{label: xAxisList[131], y: yAxisList[131] },
+			{label: xAxisList[132], y: yAxisList[132] },
+			{label: xAxisList[133], y: yAxisList[133] },
+			{label: xAxisList[134], y: yAxisList[134] },
+			{label: xAxisList[135], y: yAxisList[135] },
+			{label: xAxisList[136], y: yAxisList[136] },
+			{label: xAxisList[137], y: yAxisList[137] },
+			{label: xAxisList[138], y: yAxisList[138] },
+			{label: xAxisList[139], y: yAxisList[139] },
+			{label: xAxisList[140], y: yAxisList[140] },
+		]
+	}]
+});
+
+var chart2 = new CanvasJS.Chart("coronavirus-cases-linear2", {
+	animationEnabled: true,
+
+	title:{
+		text: "Total Worldwide COVID-19 Deaths (since Jan.22)"
+	},
+	
+	subtitle: {
+    text: '(Linear Scale)'
+  },
+
+	axisX:{
+    title: "Date"
+  },
+
+	axisY:{
+		title: "Total Deaths"
+	},
+
+	axisY:{
+		includeZero: true
+	},
+
+	data: [{        
+		type: "line",
+      	indexLabelFontSize: 16,
+		dataPoints: [
+			{label: xAxisList[0], y: yAxisList2[0] },
+			{label: xAxisList[1], y: yAxisList2[1] },
+			{label: xAxisList[2], y: yAxisList2[2] },
+			{label: xAxisList[3], y: yAxisList2[3] },
+			{label: xAxisList[4], y: yAxisList2[4] },
+			{label: xAxisList[5], y: yAxisList2[5] },
+			{label: xAxisList[6], y: yAxisList2[6] },
+			{label: xAxisList[7], y: yAxisList2[7] },
+			{label: xAxisList[8], y: yAxisList2[8] },
+			{label: xAxisList[9], y: yAxisList2[9] },
+			{label: xAxisList[10], y: yAxisList2[10] },
+			{label: xAxisList[11], y: yAxisList2[11] },
+			{label: xAxisList[12], y: yAxisList2[12] },
+			{label: xAxisList[13], y: yAxisList2[13] },
+			{label: xAxisList[14], y: yAxisList2[14] },
+			{label: xAxisList[15], y: yAxisList2[15] },
+			{label: xAxisList[16], y: yAxisList2[16] },
+			{label: xAxisList[17], y: yAxisList2[17] },
+			{label: xAxisList[18], y: yAxisList2[18] },
+			{label: xAxisList[19], y: yAxisList2[19] },
+			{label: xAxisList[20], y: yAxisList2[20] },
+			{label: xAxisList[21], y: yAxisList2[21] },
+			{label: xAxisList[22], y: yAxisList2[22] },
+			{label: xAxisList[23], y: yAxisList2[23] },
+			{label: xAxisList[24], y: yAxisList2[24] },
+			{label: xAxisList[25], y: yAxisList2[25] },
+			{label: xAxisList[26], y: yAxisList2[26] },
+			{label: xAxisList[27], y: yAxisList2[27] },
+			{label: xAxisList[28], y: yAxisList2[28] },
+			{label: xAxisList[29], y: yAxisList2[29] },
+			{label: xAxisList[30], y: yAxisList2[30] },
+			{label: xAxisList[31], y: yAxisList2[31] },
+			{label: xAxisList[32], y: yAxisList2[32] },
+			{label: xAxisList[33], y: yAxisList2[33] },
+			{label: xAxisList[34], y: yAxisList2[34] },
+			{label: xAxisList[35], y: yAxisList2[35] },
+			{label: xAxisList[36], y: yAxisList2[36] },
+			{label: xAxisList[37], y: yAxisList2[37] },
+			{label: xAxisList[38], y: yAxisList2[38] },
+			{label: xAxisList[39], y: yAxisList2[39] },
+			{label: xAxisList[40], y: yAxisList2[40] },
+			{label: xAxisList[41], y: yAxisList2[41] },
+			{label: xAxisList[42], y: yAxisList2[42] },
+			{label: xAxisList[43], y: yAxisList2[43] },
+			{label: xAxisList[44], y: yAxisList2[44] },
+			{label: xAxisList[45], y: yAxisList2[45] },
+			{label: xAxisList[46], y: yAxisList2[46] },
+			{label: xAxisList[47], y: yAxisList2[47] },
+			{label: xAxisList[48], y: yAxisList2[48] },
+			{label: xAxisList[49], y: yAxisList2[49] },
+			{label: xAxisList[50], y: yAxisList2[50] },
+			{label: xAxisList[51], y: yAxisList2[51] },
+			{label: xAxisList[52], y: yAxisList2[52] },
+			{label: xAxisList[53], y: yAxisList2[53] },
+			{label: xAxisList[54], y: yAxisList2[54] },
+			{label: xAxisList[55], y: yAxisList2[55] },
+			{label: xAxisList[56], y: yAxisList2[56] },
+			{label: xAxisList[57], y: yAxisList2[57] },
+			{label: xAxisList[58], y: yAxisList2[58] },
+			{label: xAxisList[59], y: yAxisList2[59] },
+			{label: xAxisList[60], y: yAxisList2[60] },
+			{label: xAxisList[61], y: yAxisList2[61] },
+			{label: xAxisList[62], y: yAxisList2[62] },
+			{label: xAxisList[63], y: yAxisList2[63] },
+			{label: xAxisList[64], y: yAxisList2[64] },
+			{label: xAxisList[65], y: yAxisList2[65] },
+			{label: xAxisList[66], y: yAxisList2[66] },
+			{label: xAxisList[67], y: yAxisList2[67] },
+			{label: xAxisList[68], y: yAxisList2[68] },
+			{label: xAxisList[69], y: yAxisList2[69] },
+			{label: xAxisList[70], y: yAxisList2[70] },
+			{label: xAxisList[71], y: yAxisList2[71] },
+			{label: xAxisList[72], y: yAxisList2[72] },
+			{label: xAxisList[73], y: yAxisList2[73] },
+			{label: xAxisList[74], y: yAxisList2[74] },
+			{label: xAxisList[75], y: yAxisList2[75] },
+			{label: xAxisList[76], y: yAxisList2[76] },
+			{label: xAxisList[77], y: yAxisList2[77] },
+			{label: xAxisList[78], y: yAxisList2[78] },
+			{label: xAxisList[79], y: yAxisList2[79] },
+			{label: xAxisList[80], y: yAxisList2[80] },
+			{label: xAxisList[81], y: yAxisList2[81] },
+			{label: xAxisList[82], y: yAxisList2[82] },
+			{label: xAxisList[83], y: yAxisList2[83] },
+			{label: xAxisList[84], y: yAxisList2[84] },
+			{label: xAxisList[85], y: yAxisList2[85] },
+			{label: xAxisList[86], y: yAxisList2[86] },
+			{label: xAxisList[87], y: yAxisList2[87] },
+			{label: xAxisList[88], y: yAxisList2[88] },
+			{label: xAxisList[89], y: yAxisList2[89] },
+			{label: xAxisList[90], y: yAxisList2[90] },
+			{label: xAxisList[91], y: yAxisList2[91] },
+			{label: xAxisList[92], y: yAxisList2[92] },
+			{label: xAxisList[93], y: yAxisList2[93] },
+			{label: xAxisList[94], y: yAxisList2[94] },
+			{label: xAxisList[95], y: yAxisList2[95] },
+			{label: xAxisList[96], y: yAxisList2[96] },
+			{label: xAxisList[97], y: yAxisList2[97] },
+			{label: xAxisList[98], y: yAxisList2[98] },
+			{label: xAxisList[99], y: yAxisList2[99] },
+			{label: xAxisList[100], y: yAxisList2[100] },
+			{label: xAxisList[101], y: yAxisList2[101] },
+			{label: xAxisList[102], y: yAxisList2[102] },
+			{label: xAxisList[103], y: yAxisList2[103] },
+			{label: xAxisList[104], y: yAxisList2[104] },
+			{label: xAxisList[105], y: yAxisList2[105] },
+			{label: xAxisList[106], y: yAxisList2[106] },
+			{label: xAxisList[107], y: yAxisList2[107] },
+			{label: xAxisList[108], y: yAxisList2[108] },
+			{label: xAxisList[109], y: yAxisList2[109] },
+			{label: xAxisList[110], y: yAxisList2[110] },
+			{label: xAxisList[111], y: yAxisList2[111] },
+			{label: xAxisList[112], y: yAxisList2[112] },
+			{label: xAxisList[113], y: yAxisList2[113] },
+			{label: xAxisList[114], y: yAxisList2[114] },
+			{label: xAxisList[115], y: yAxisList2[115] },
+			{label: xAxisList[116], y: yAxisList2[116] },
+			{label: xAxisList[117], y: yAxisList2[117] },
+			{label: xAxisList[118], y: yAxisList2[118] },
+			{label: xAxisList[119], y: yAxisList2[119] },
+			{label: xAxisList[120], y: yAxisList2[120] },
+			{label: xAxisList[121], y: yAxisList2[121] },
+			{label: xAxisList[122], y: yAxisList2[122] },
+			{label: xAxisList[123], y: yAxisList2[123] },
+			{label: xAxisList[124], y: yAxisList2[124] },
+			{label: xAxisList[125], y: yAxisList2[125] },
+			{label: xAxisList[126], y: yAxisList2[126] },
+			{label: xAxisList[127], y: yAxisList2[127] },
+			{label: xAxisList[128], y: yAxisList2[128] },
+			{label: xAxisList[129], y: yAxisList2[129] },
+			{label: xAxisList[130], y: yAxisList2[130] },
+			{label: xAxisList[131], y: yAxisList2[131] },
+			{label: xAxisList[132], y: yAxisList2[132] },
+			{label: xAxisList[133], y: yAxisList2[133] },
+			{label: xAxisList[134], y: yAxisList2[134] },
+			{label: xAxisList[135], y: yAxisList2[135] },
+			{label: xAxisList[136], y: yAxisList2[136] },
+			{label: xAxisList[137], y: yAxisList2[137] },
+			{label: xAxisList[138], y: yAxisList2[138] },
+			{label: xAxisList[139], y: yAxisList2[139] },
+			{label: xAxisList[140], y: yAxisList2[140] },
+		]
+	}]
+});
+
+CanvasJS.addColorSet("worldActive",
+[
+  "#FFEC00",
+  "#EADA11",
+  "#D1C30E",
+  "#B1A726",
+  "#A8A14B"                
+]);
+
+var chart3 = new CanvasJS.Chart("coronavirus-cases-linear3", {
+	animationEnabled: true,
+
+	colorSet: "worldActive",
+	
+	title:{
+		text: "Current Active Cases each day (since Jan.22)"
+	},
+	
+	subtitle: {
+    text: '(Linear Scale)'
+  },
+
+	axisX:{
+    title: "Date"
+  },
+
+	axisY:{
+		title: "Total Active Cases"
+	},
+
+	axisY:{
+		includeZero: true
+	},
+
+	data: [{        
+		type: "column",
+      	indexLabelFontSize: 16,
+		dataPoints: [
+			{label: xAxisList[0], y: yAxisList3[0] },
+			{label: xAxisList[1], y: yAxisList3[1] },
+			{label: xAxisList[2], y: yAxisList3[2] },
+			{label: xAxisList[3], y: yAxisList3[3] },
+			{label: xAxisList[4], y: yAxisList3[4] },
+			{label: xAxisList[5], y: yAxisList3[5] },
+			{label: xAxisList[6], y: yAxisList3[6] },
+			{label: xAxisList[7], y: yAxisList3[7] },
+			{label: xAxisList[8], y: yAxisList3[8] },
+			{label: xAxisList[9], y: yAxisList3[9] },
+			{label: xAxisList[10], y: yAxisList3[10] },
+			{label: xAxisList[11], y: yAxisList3[11] },
+			{label: xAxisList[12], y: yAxisList3[12] },
+			{label: xAxisList[13], y: yAxisList3[13] },
+			{label: xAxisList[14], y: yAxisList3[14] },
+			{label: xAxisList[15], y: yAxisList3[15] },
+			{label: xAxisList[16], y: yAxisList3[16] },
+			{label: xAxisList[17], y: yAxisList3[17] },
+			{label: xAxisList[18], y: yAxisList3[18] },
+			{label: xAxisList[19], y: yAxisList3[19] },
+			{label: xAxisList[20], y: yAxisList3[20] },
+			{label: xAxisList[21], y: yAxisList3[21] },
+			{label: xAxisList[22], y: yAxisList3[22] },
+			{label: xAxisList[23], y: yAxisList3[23] },
+			{label: xAxisList[24], y: yAxisList3[24] },
+			{label: xAxisList[25], y: yAxisList3[25] },
+			{label: xAxisList[26], y: yAxisList3[26] },
+			{label: xAxisList[27], y: yAxisList3[27] },
+			{label: xAxisList[28], y: yAxisList3[28] },
+			{label: xAxisList[29], y: yAxisList3[29] },
+			{label: xAxisList[30], y: yAxisList3[30] },
+			{label: xAxisList[31], y: yAxisList3[31] },
+			{label: xAxisList[32], y: yAxisList3[32] },
+			{label: xAxisList[33], y: yAxisList3[33] },
+			{label: xAxisList[34], y: yAxisList3[34] },
+			{label: xAxisList[35], y: yAxisList3[35] },
+			{label: xAxisList[36], y: yAxisList3[36] },
+			{label: xAxisList[37], y: yAxisList3[37] },
+			{label: xAxisList[38], y: yAxisList3[38] },
+			{label: xAxisList[39], y: yAxisList3[39] },
+			{label: xAxisList[40], y: yAxisList3[40] },
+			{label: xAxisList[41], y: yAxisList3[41] },
+			{label: xAxisList[42], y: yAxisList3[42] },
+			{label: xAxisList[43], y: yAxisList3[43] },
+			{label: xAxisList[44], y: yAxisList3[44] },
+			{label: xAxisList[45], y: yAxisList3[45] },
+			{label: xAxisList[46], y: yAxisList3[46] },
+			{label: xAxisList[47], y: yAxisList3[47] },
+			{label: xAxisList[48], y: yAxisList3[48] },
+			{label: xAxisList[49], y: yAxisList3[49] },
+			{label: xAxisList[50], y: yAxisList3[50] },
+			{label: xAxisList[51], y: yAxisList3[51] },
+			{label: xAxisList[52], y: yAxisList3[52] },
+			{label: xAxisList[53], y: yAxisList3[53] },
+			{label: xAxisList[54], y: yAxisList3[54] },
+			{label: xAxisList[55], y: yAxisList3[55] },
+			{label: xAxisList[56], y: yAxisList3[56] },
+			{label: xAxisList[57], y: yAxisList3[57] },
+			{label: xAxisList[58], y: yAxisList3[58] },
+			{label: xAxisList[59], y: yAxisList3[59] },
+			{label: xAxisList[60], y: yAxisList3[60] },
+			{label: xAxisList[61], y: yAxisList3[61] },
+			{label: xAxisList[62], y: yAxisList3[62] },
+			{label: xAxisList[63], y: yAxisList3[63] },
+			{label: xAxisList[64], y: yAxisList3[64] },
+			{label: xAxisList[65], y: yAxisList3[65] },
+			{label: xAxisList[66], y: yAxisList3[66] },
+			{label: xAxisList[67], y: yAxisList3[67] },
+			{label: xAxisList[68], y: yAxisList3[68] },
+			{label: xAxisList[69], y: yAxisList3[69] },
+			{label: xAxisList[70], y: yAxisList3[70] },
+			{label: xAxisList[71], y: yAxisList3[71] },
+			{label: xAxisList[72], y: yAxisList3[72] },
+			{label: xAxisList[73], y: yAxisList3[73] },
+			{label: xAxisList[74], y: yAxisList3[74] },
+			{label: xAxisList[75], y: yAxisList3[75] },
+			{label: xAxisList[76], y: yAxisList3[76] },
+			{label: xAxisList[77], y: yAxisList3[77] },
+			{label: xAxisList[78], y: yAxisList3[78] },
+			{label: xAxisList[79], y: yAxisList3[79] },
+			{label: xAxisList[80], y: yAxisList3[80] },
+			{label: xAxisList[81], y: yAxisList3[81] },
+			{label: xAxisList[82], y: yAxisList3[82] },
+			{label: xAxisList[83], y: yAxisList3[83] },
+			{label: xAxisList[84], y: yAxisList3[84] },
+			{label: xAxisList[85], y: yAxisList3[85] },
+			{label: xAxisList[86], y: yAxisList3[86] },
+			{label: xAxisList[87], y: yAxisList3[87] },
+			{label: xAxisList[88], y: yAxisList3[88] },
+			{label: xAxisList[89], y: yAxisList3[89] },
+			{label: xAxisList[90], y: yAxisList3[90] },
+			{label: xAxisList[91], y: yAxisList3[91] },
+			{label: xAxisList[92], y: yAxisList3[92] },
+			{label: xAxisList[93], y: yAxisList3[93] },
+			{label: xAxisList[94], y: yAxisList3[94] },
+			{label: xAxisList[95], y: yAxisList3[95] },
+			{label: xAxisList[96], y: yAxisList3[96] },
+			{label: xAxisList[97], y: yAxisList3[97] },
+			{label: xAxisList[98], y: yAxisList3[98] },
+			{label: xAxisList[99], y: yAxisList3[99] },
+			{label: xAxisList[100], y: yAxisList3[100] },
+			{label: xAxisList[101], y: yAxisList3[101] },
+			{label: xAxisList[102], y: yAxisList3[102] },
+			{label: xAxisList[103], y: yAxisList3[103] },
+			{label: xAxisList[104], y: yAxisList3[104] },
+			{label: xAxisList[105], y: yAxisList3[105] },
+			{label: xAxisList[106], y: yAxisList3[106] },
+			{label: xAxisList[107], y: yAxisList3[107] },
+			{label: xAxisList[108], y: yAxisList3[108] },
+			{label: xAxisList[109], y: yAxisList3[109] },
+			{label: xAxisList[110], y: yAxisList3[110] },
+			{label: xAxisList[111], y: yAxisList3[111] },
+			{label: xAxisList[112], y: yAxisList3[112] },
+			{label: xAxisList[113], y: yAxisList3[113] },
+			{label: xAxisList[114], y: yAxisList3[114] },
+			{label: xAxisList[115], y: yAxisList3[115] },
+			{label: xAxisList[116], y: yAxisList3[116] },
+			{label: xAxisList[117], y: yAxisList3[117] },
+			{label: xAxisList[118], y: yAxisList3[118] },
+			{label: xAxisList[119], y: yAxisList3[119] },
+			{label: xAxisList[120], y: yAxisList3[120] },
+			{label: xAxisList[121], y: yAxisList3[121] },
+			{label: xAxisList[122], y: yAxisList3[122] },
+			{label: xAxisList[123], y: yAxisList3[123] },
+			{label: xAxisList[124], y: yAxisList3[124] },
+			{label: xAxisList[125], y: yAxisList3[125] },
+			{label: xAxisList[126], y: yAxisList3[126] },
+			{label: xAxisList[127], y: yAxisList3[127] },
+			{label: xAxisList[128], y: yAxisList3[128] },
+			{label: xAxisList[129], y: yAxisList3[129] },
+			{label: xAxisList[130], y: yAxisList3[130] },
+			{label: xAxisList[131], y: yAxisList3[131] },
+			{label: xAxisList[132], y: yAxisList3[132] },
+			{label: xAxisList[133], y: yAxisList3[133] },
+			{label: xAxisList[134], y: yAxisList3[134] },
+			{label: xAxisList[135], y: yAxisList3[135] },
+			{label: xAxisList[136], y: yAxisList3[136] },
+			{label: xAxisList[137], y: yAxisList3[137] },
+			{label: xAxisList[138], y: yAxisList3[138] },
+			{label: xAxisList[139], y: yAxisList3[139] },
+			{label: xAxisList[140], y: yAxisList3[140] },
+		]
+	}]
+});
+var chart4 = new CanvasJS.Chart("coronavirus-cases-linear4", {
+	animationEnabled: true,
+	
+	title:{
+		text: "Total Recovered Cases (since Jan.22)"
+	},
+	
+	subtitle: {
+    text: '(Linear Scale)'
+  },
+
+	axisX:{
+    title: "Date"
+  },
+
+	axisY:{
+		title: "Total Recovered Cases"
+	},
+
+	axisY:{
+		includeZero: true
+	},
+
+	data: [{        
+		type: "line",
+      	indexLabelFontSize: 16,
+		dataPoints: [
+			{label: xAxisList[11], y: yAxisList4[0] },
+			{label: xAxisList[12], y: yAxisList4[1] },
+			{label: xAxisList[13], y: yAxisList4[2] },
+			{label: xAxisList[14], y: yAxisList4[3] },
+			{label: xAxisList[15], y: yAxisList4[4] },
+			{label: xAxisList[16], y: yAxisList4[5] },
+			{label: xAxisList[17], y: yAxisList4[6] },
+			{label: xAxisList[18], y: yAxisList4[7] },
+			{label: xAxisList[19], y: yAxisList4[8] },
+			{label: xAxisList[20], y: yAxisList4[9] },
+			{label: xAxisList[21], y: yAxisList4[10] },
+			{label: xAxisList[22], y: yAxisList4[11] },
+			{label: xAxisList[23], y: yAxisList4[12] },
+			{label: xAxisList[24], y: yAxisList4[13] },
+			{label: xAxisList[25], y: yAxisList4[14] },
+			{label: xAxisList[26], y: yAxisList4[15] },
+			{label: xAxisList[27], y: yAxisList4[16] },
+			{label: xAxisList[28], y: yAxisList4[17] },
+			{label: xAxisList[29], y: yAxisList4[18] },
+			{label: xAxisList[30], y: yAxisList4[19] },
+			{label: xAxisList[31], y: yAxisList4[20] },
+			{label: xAxisList[32], y: yAxisList4[21] },
+			{label: xAxisList[33], y: yAxisList4[22] },
+			{label: xAxisList[34], y: yAxisList4[23] },
+			{label: xAxisList[35], y: yAxisList4[24] },
+			{label: xAxisList[36], y: yAxisList4[25] },
+			{label: xAxisList[37], y: yAxisList4[26] },
+			{label: xAxisList[38], y: yAxisList4[27] },
+			{label: xAxisList[39], y: yAxisList4[28] },
+			{label: xAxisList[40], y: yAxisList4[29] },
+			{label: xAxisList[41], y: yAxisList4[30] },
+			{label: xAxisList[42], y: yAxisList4[31] },
+			{label: xAxisList[43], y: yAxisList4[32] },
+			{label: xAxisList[44], y: yAxisList4[33] },
+			{label: xAxisList[45], y: yAxisList4[34] },
+			{label: xAxisList[46], y: yAxisList4[35] },
+			{label: xAxisList[47], y: yAxisList4[36] },
+			{label: xAxisList[48], y: yAxisList4[37] },
+			{label: xAxisList[49], y: yAxisList4[38] },
+			{label: xAxisList[50], y: yAxisList4[39] },
+			{label: xAxisList[51], y: yAxisList4[40] },
+			{label: xAxisList[52], y: yAxisList4[41] },
+			{label: xAxisList[53], y: yAxisList4[42] },
+			{label: xAxisList[54], y: yAxisList4[43] },
+			{label: xAxisList[55], y: yAxisList4[44] },
+			{label: xAxisList[56], y: yAxisList4[45] },
+			{label: xAxisList[57], y: yAxisList4[46] },
+			{label: xAxisList[58], y: yAxisList4[47] },
+			{label: xAxisList[59], y: yAxisList4[48] },
+			{label: xAxisList[60], y: yAxisList4[49] },
+			{label: xAxisList[61], y: yAxisList4[50] },
+			{label: xAxisList[62], y: yAxisList4[51] },
+			{label: xAxisList[63], y: yAxisList4[52] },
+			{label: xAxisList[64], y: yAxisList4[53] },
+			{label: xAxisList[65], y: yAxisList4[54] },
+			{label: xAxisList[66], y: yAxisList4[55] },
+			{label: xAxisList[67], y: yAxisList4[56] },
+			{label: xAxisList[68], y: yAxisList4[57] },
+			{label: xAxisList[69], y: yAxisList4[58] },
+			{label: xAxisList[70], y: yAxisList4[59] },
+			{label: xAxisList[71], y: yAxisList4[60] },
+			{label: xAxisList[72], y: yAxisList4[61] },
+			{label: xAxisList[73], y: yAxisList4[62] },
+			{label: xAxisList[74], y: yAxisList4[63] },
+			{label: xAxisList[75], y: yAxisList4[64] },
+			{label: xAxisList[76], y: yAxisList4[65] },
+			{label: xAxisList[77], y: yAxisList4[66] },
+			{label: xAxisList[78], y: yAxisList4[67] },
+			{label: xAxisList[79], y: yAxisList4[68] },
+			{label: xAxisList[80], y: yAxisList4[69] },
+			{label: xAxisList[81], y: yAxisList4[70] },
+			{label: xAxisList[82], y: yAxisList4[71] },
+			{label: xAxisList[83], y: yAxisList4[72] },
+			{label: xAxisList[84], y: yAxisList4[73] },
+			{label: xAxisList[85], y: yAxisList4[74] },
+			{label: xAxisList[86], y: yAxisList4[75] },
+			{label: xAxisList[87], y: yAxisList4[76] },
+			{label: xAxisList[88], y: yAxisList4[77] },
+			{label: xAxisList[89], y: yAxisList4[78] },
+			{label: xAxisList[90], y: yAxisList4[79] },
+			{label: xAxisList[91], y: yAxisList4[80] },
+			{label: xAxisList[92], y: yAxisList4[81] },
+			{label: xAxisList[93], y: yAxisList4[82] },
+			{label: xAxisList[94], y: yAxisList4[83] },
+			{label: xAxisList[95], y: yAxisList4[84] },
+			{label: xAxisList[96], y: yAxisList4[85] },
+			{label: xAxisList[97], y: yAxisList4[86] },
+			{label: xAxisList[98], y: yAxisList4[87] },
+			{label: xAxisList[99], y: yAxisList4[88] },
+			{label: xAxisList[100], y: yAxisList4[89] },
+			{label: xAxisList[101], y: yAxisList4[90] },
+			{label: xAxisList[102], y: yAxisList4[91] },
+			{label: xAxisList[103], y: yAxisList4[92] },
+			{label: xAxisList[104], y: yAxisList4[93] },
+			{label: xAxisList[105], y: yAxisList4[94] },
+			{label: xAxisList[106], y: yAxisList4[95] },
+			{label: xAxisList[107], y: yAxisList4[96] },
+			{label: xAxisList[108], y: yAxisList4[97] },
+			{label: xAxisList[109], y: yAxisList4[98] },
+			{label: xAxisList[110], y: yAxisList4[99] },
+			{label: xAxisList[111], y: yAxisList4[100] },
+			{label: xAxisList[112], y: yAxisList4[101] },
+			{label: xAxisList[113], y: yAxisList4[102] },
+			{label: xAxisList[114], y: yAxisList4[103] },
+			{label: xAxisList[115], y: yAxisList4[104] },
+			{label: xAxisList[116], y: yAxisList4[105] },
+			{label: xAxisList[117], y: yAxisList4[106] },
+			{label: xAxisList[118], y: yAxisList4[107] },
+			{label: xAxisList[119], y: yAxisList4[108] },
+			{label: xAxisList[120], y: yAxisList4[109] },
+			{label: xAxisList[121], y: yAxisList4[110] },
+			{label: xAxisList[122], y: yAxisList4[111] },
+			{label: xAxisList[123], y: yAxisList4[112] },
+			{label: xAxisList[124], y: yAxisList4[113] },
+			{label: xAxisList[125], y: yAxisList4[114] },
+			{label: xAxisList[126], y: yAxisList4[115] },
+			{label: xAxisList[127], y: yAxisList4[116] },
+			{label: xAxisList[128], y: yAxisList4[117] },
+			{label: xAxisList[129], y: yAxisList4[118] },
+			{label: xAxisList[130], y: yAxisList4[119] },
+			{label: xAxisList[131], y: yAxisList4[120] },
+			{label: xAxisList[132], y: yAxisList4[121] },
+			{label: xAxisList[133], y: yAxisList4[122] },
+			{label: xAxisList[134], y: yAxisList4[123] },
+			{label: xAxisList[135], y: yAxisList4[124] },
+			{label: xAxisList[136], y: yAxisList4[125] },
+			{label: xAxisList[137], y: yAxisList4[126] },
+			{label: xAxisList[138], y: yAxisList4[127] },
+			{label: xAxisList[139], y: yAxisList4[128] },
+			{label: xAxisList[140], y: yAxisList4[129] },
+		]
+	}]
+});
+chart1.render();
+chart2.render();
+chart3.render();
+chart4.render()
+}
+</script>
+</head>
+<body>
+<h1>Coronavirus around the World</h1>
+<p><a href="contactTracingWordWide.html"> View these stats on Map </a> </p> 
+<p><a href = "statsHome.html"> Go back to Stats homepage </a></p><br>
+<div id="coronavirus-cases-linear" style="height: 300px; width: 90%;"></div>  
+<div id="coronavirus-cases-linear2" style="height: 300px; width: 90%;"></div>
+<div id="coronavirus-cases-linear4" style="height: 300px; width: 90%;"></div>
+<div id="coronavirus-cases-linear3" style="height: 300px; width: 90%;"></div>    
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<h2 id="case-distribution">Cases distribution by Country</h2>
+<div id="countries-cases-pie"></div>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script type="text/javascript">
+    Highcharts.setOptions({
+        lang: {
+            thousandsSep: ','
+        }
+    });
+
+    Highcharts.chart('countries-cases-pie', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Distribution of cases'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.2f}% ({point.value:,.0f} cases)</b>'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                startAngle: 180,
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.2f} % ({point.value:,.0f} cases)'
+                }
+            }
+        },
+        series: [{
+            name: 'Cases',
+            colorByPoint: true,
+            data: [
+
+                 {
+                        name: 'United States',
+                        y: 27.60,
+                        value: 2070961                    },
+                 {
+                        name: 'Brazil',
+                        y: 10.34,
+                        value: 775581                    },
+                 {
+                        name: 'Russia',
+                        y: 6.70,
+                        value: 502436                    },
+                 {
+                        name: 'United Kingdom',
+                        y: 3.88,
+                        value: 291409                    },
+                 {
+                        name: 'India',
+                        y: 3.87,
+                        value: 290481                    },
+                 {
+                        name: 'Spain',
+                        y: 3.86,
+                        value: 289360                    },
+                 {
+                        name: 'Italy',
+                        y: 3.14,
+                        value: 235763                    },
+                 {
+                        name: 'Peru',
+                        y: 2.78,
+                        value: 208823                    },
+                 {
+                        name: 'Germany',
+                        y: 2.49,
+                        value: 186557                    },
+                 {
+                        name: 'Iran',
+                        y: 2.40,
+                        value: 180156                    },
+                 {
+                        name: 'Turkey',
+                        y: 2.31,
+                        value: 173036                    },
+                 {
+                        name: 'France',
+                        y: 2.07,
+                        value: 155136                    },
+                 {
+                        name: 'Chile',
+                        y: 1.98,
+                        value: 148496                    },
+                 {
+                        name: 'Mexico',
+                        y: 1.72,
+                        value: 129184                    },
+                 {
+                        name: 'Pakistan',
+                        y: 1.59,
+                        value: 119536                    },
+                 {
+                        name: 'Saudi Arabia',
+                        y: 1.55,
+                        value: 116021                    },
+                 {
+                        name: 'Canada',
+                        y: 1.30,
+                        value: 97328                    },
+                 {
+                        name: 'China',
+                        y: 1.11,
+                        value: 83057                    },
+                 {
+                        name: 'Bangladesh',
+                        y: 1.04,
+                        value: 78052                    },
+                 {
+                        name: 'Qatar',
+                        y: 1.00,
+                        value: 75071                    },
+                 {
+                        name: 'Belgium',
+                        y: 0.80,
+                        value: 59711                    },
+                 {
+                        name: 'South Africa',
+                        y: 0.74,
+                        value: 55421                    },
+                 {
+                        name: 'Belarus',
+                        y: 0.69,
+                        value: 51816                    },
+                 {
+                        name: 'Sweden',
+                        y: 0.64,
+                        value: 48288                    },
+                 {
+                        name: 'Netherlands',
+                        y: 0.64,
+                        value: 48251                    },
+                 {
+                        name: 'Ecuador',
+                        y: 0.59,
+                        value: 44440                    },
+                 {
+                        name: 'Colombia',
+                        y: 0.58,
+                        value: 43682                    },
+                 {
+                        name: 'United Arab Emirates',
+                        y: 0.55,
+                        value: 40986                    },
+                 {
+                        name: 'Singapore',
+                        y: 0.52,
+                        value: 39387                    },
+                 {
+                        name: 'Egypt',
+                        y: 0.51,
+                        value: 38284                    },
+                 {
+                        name: 'Portugal',
+                        y: 0.48,
+                        value: 35910                    },
+                 {
+                        name: 'Indonesia',
+                        y: 0.47,
+                        value: 35295                    },
+                 {
+                        name: 'Kuwait',
+                        y: 0.46,
+                        value: 34432                    },
+                 {
+                        name: 'Switzerland',
+                        y: 0.41,
+                        value: 31044                    },
+                 {
+                        name: 'Ukraine',
+                        y: 0.39,
+                        value: 29070                    },
+                 {
+                        name: 'Poland',
+                        y: 0.38,
+                        value: 28201                    },
+                 {
+                        name: 'Argentina',
+                        y: 0.35,
+                        value: 25987                    },
+                 {
+                        name: 'Ireland',
+                        y: 0.34,
+                        value: 25231                    },
+                 {
+                        name: 'Philippines',
+                        y: 0.32,
+                        value: 24175                    },
+                 {
+                        name: 'Afghanistan',
+                        y: 0.31,
+                        value: 22890                    },
+                 {
+                        name: 'Dominican Republic',
+                        y: 0.29,
+                        value: 21437                    },
+                 {
+                        name: 'Romania',
+                        y: 0.28,
+                        value: 21182                    },
+                 {
+                        name: 'Oman',
+                        y: 0.27,
+                        value: 19954                    },
+                 {
+                        name: 'Israel',
+                        y: 0.25,
+                        value: 18461                    },
+                 {
+                        name: 'Panama',
+                        y: 0.24,
+                        value: 17889                    },
+                 {
+                        name: 'Japan',
+                        y: 0.23,
+                        value: 17251                    },
+                 {
+                        name: 'Austria',
+                        y: 0.23,
+                        value: 17034                    },
+                 {
+                        name: 'Iraq',
+                        y: 0.22,
+                        value: 16675                    },
+                 {
+                        name: 'Bahrain',
+                        y: 0.22,
+                        value: 16667                    },
+                 {
+                        name: 'Bolivia',
+                        y: 0.20,
+                        value: 15281                    },
+                 {
+                        name: 'Armenia',
+                        y: 0.20,
+                        value: 14669                    },
+                 {
+                        name: 'Nigeria',
+                        y: 0.18,
+                        value: 13873                    },
+                 {
+                        name: 'Kazakhstan',
+                        y: 0.18,
+                        value: 13558                    },
+                 {
+                        name: 'Serbia',
+                        y: 0.16,
+                        value: 12102                    },
+                 {
+                        name: 'Denmark',
+                        y: 0.16,
+                        value: 12035                    },
+                 {
+                        name: 'South Korea',
+                        y: 0.16,
+                        value: 11947                    },
+                 {
+                        name: 'Moldova',
+                        y: 0.14,
+                        value: 10727                    },
+                 {
+                        name: 'Algeria',
+                        y: 0.14,
+                        value: 10484                    },
+                 {
+                        name: 'Ghana',
+                        y: 0.14,
+                        value: 10358                    },
+                 {
+                        name: 'Czech Republic (Czechia)',
+                        y: 0.13,
+                        value: 9826                    },
+                 {
+                        name: 'Azerbaijan',
+                        y: 0.12,
+                        value: 8882                    },
+                 {
+                        name: 'Cameroon',
+                        y: 0.12,
+                        value: 8681                    },
+                 {
+                        name: 'Norway',
+                        y: 0.11,
+                        value: 8600                    },
+                 {
+                        name: 'Morocco',
+                        y: 0.11,
+                        value: 8533                    },
+                 {
+                        name: 'Malaysia',
+                        y: 0.11,
+                        value: 8369                    },
+                 {
+                        name: 'Guatemala',
+                        y: 0.11,
+                        value: 8221                    },
+                 {
+                        name: 'Honduras',
+                        y: 0.10,
+                        value: 7360                    },
+                 {
+                        name: 'Australia',
+                        y: 0.10,
+                        value: 7285                    },
+                 {
+                        name: 'Finland',
+                        y: 0.09,
+                        value: 7064                    },
+                 {
+                        name: 'Sudan',
+                        y: 0.09,
+                        value: 6582                    },
+                 {
+                        name: 'Tajikistan',
+                        y: 0.06,
+                        value: 4834                    },
+                 {
+                        name: 'Senegal',
+                        y: 0.06,
+                        value: 4759                    },
+                 {
+                        name: 'Uzbekistan',
+                        y: 0.06,
+                        value: 4717                    },
+                 {
+                        name: 'Nepal',
+                        y: 0.06,
+                        value: 4614                    },
+                 {
+                        name: 'DR Congo',
+                        y: 0.06,
+                        value: 4515                    },
+                 {
+                        name: 'Djibouti',
+                        y: 0.06,
+                        value: 4398                    },
+                 {
+                        name: 'Guinea',
+                        y: 0.06,
+                        value: 4258                    },
+                 {
+                        name: 'C&ocirc;te d\'Ivoire',
+                        y: 0.06,
+                        value: 4181                    },
+                 {
+                        name: 'Luxembourg',
+                        y: 0.05,
+                        value: 4049                    },
+                 {
+                        name: 'Hungary',
+                        y: 0.05,
+                        value: 4039                    },
+                 {
+                        name: 'Haiti',
+                        y: 0.05,
+                        value: 3796                    },
+                 {
+                        name: 'North Macedonia',
+                        y: 0.05,
+                        value: 3538                    },
+                 {
+                        name: 'Gabon',
+                        y: 0.04,
+                        value: 3375                    },
+                 {
+                        name: 'El Salvador',
+                        y: 0.04,
+                        value: 3373                    },
+                 {
+                        name: 'Kenya',
+                        y: 0.04,
+                        value: 3215                    },
+                 {
+                        name: 'Thailand',
+                        y: 0.04,
+                        value: 3125                    },
+                 {
+                        name: 'Greece',
+                        y: 0.04,
+                        value: 3068                    },
+                 {
+                        name: 'Bulgaria',
+                        y: 0.04,
+                        value: 2993                    },
+                 {
+                        name: 'Bosnia and Herzegovina',
+                        y: 0.04,
+                        value: 2832                    },
+                 {
+                        name: 'Venezuela',
+                        y: 0.04,
+                        value: 2738                    },
+                 {
+                        name: 'Ethiopia',
+                        y: 0.04,
+                        value: 2670                    },
+                 {
+                        name: 'Somalia',
+                        y: 0.03,
+                        value: 2513                    },
+                 {
+                        name: 'Croatia',
+                        y: 0.03,
+                        value: 2249                    },
+                 {
+                        name: 'Mayotte',
+                        y: 0.03,
+                        value: 2240                    },
+                 {
+                        name: 'Cuba',
+                        y: 0.03,
+                        value: 2219                    },
+                 {
+                        name: 'Kyrgyzstan',
+                        y: 0.03,
+                        value: 2129                    },
+                 {
+                        name: 'Estonia',
+                        y: 0.03,
+                        value: 1965                    },
+                 {
+                        name: 'Maldives',
+                        y: 0.03,
+                        value: 1962                    },
+                 {
+                        name: 'Central African Republic',
+                        y: 0.03,
+                        value: 1952                    },
+                 {
+                        name: 'Sri Lanka',
+                        y: 0.02,
+                        value: 1873                    },
+                 {
+                        name: 'Iceland',
+                        y: 0.02,
+                        value: 1807                    },
+                 {
+                        name: 'Lithuania',
+                        y: 0.02,
+                        value: 1752                    },
+                 {
+                        name: 'Mali',
+                        y: 0.02,
+                        value: 1667                    },
+                 {
+                        name: 'South Sudan',
+                        y: 0.02,
+                        value: 1604                    },
+                 {
+                        name: 'Slovakia',
+                        y: 0.02,
+                        value: 1541                    },
+                 {
+                        name: 'New Zealand',
+                        y: 0.02,
+                        value: 1504                    },
+                 {
+                        name: 'Slovenia',
+                        y: 0.02,
+                        value: 1488                    },
+                 {
+                        name: 'Nicaragua',
+                        y: 0.02,
+                        value: 1464                    },
+                 {
+                        name: 'Costa Rica',
+                        y: 0.02,
+                        value: 1461                    },
+                 {
+                        name: 'Lebanon',
+                        y: 0.02,
+                        value: 1402                    },
+                 {
+                        name: 'Guinea-Bissau',
+                        y: 0.02,
+                        value: 1389                    },
+                 {
+                        name: 'Albania',
+                        y: 0.02,
+                        value: 1385                    },
+                 {
+                        name: 'Equatorial Guinea',
+                        y: 0.02,
+                        value: 1306                    },
+                 {
+                        name: 'Mauritania',
+                        y: 0.02,
+                        value: 1283                    },
+                 {
+                        name: 'Madagascar',
+                        y: 0.02,
+                        value: 1203                    },
+                 {
+                        name: 'Paraguay',
+                        y: 0.02,
+                        value: 1202                    },
+                 {
+                        name: 'Zambia',
+                        y: 0.02,
+                        value: 1200                    },
+                 {
+                        name: 'Hong Kong',
+                        y: 0.01,
+                        value: 1108                    },
+                 {
+                        name: 'Latvia',
+                        y: 0.01,
+                        value: 1094                    },
+                 {
+                        name: 'Tunisia',
+                        y: 0.01,
+                        value: 1087                    },
+                 {
+                        name: 'Sierra Leone',
+                        y: 0.01,
+                        value: 1062                    },
+                 {
+                        name: 'Niger',
+                        y: 0.01,
+                        value: 974                    },
+                 {
+                        name: 'Cyprus',
+                        y: 0.01,
+                        value: 974                    },
+                 {
+                        name: 'French Guiana',
+                        y: 0.01,
+                        value: 917                    },
+                 {
+                        name: 'Burkina Faso',
+                        y: 0.01,
+                        value: 891                    },
+                 {
+                        name: 'Jordan',
+                        y: 0.01,
+                        value: 863                    },
+                 {
+                        name: 'Andorra',
+                        y: 0.01,
+                        value: 852                    },
+                 {
+                        name: 'Uruguay',
+                        y: 0.01,
+                        value: 847                    },
+                 {
+                        name: 'Chad',
+                        y: 0.01,
+                        value: 846                    },
+                 {
+                        name: 'Georgia',
+                        y: 0.01,
+                        value: 831                    },
+                 {
+                        name: 'Congo',
+                        y: 0.01,
+                        value: 728                    },
+                 {
+                        name: 'Diamond Princess',
+                        y: 0.01,
+                        value: 712                    },
+                 {
+                        name: 'San Marino',
+                        y: 0.01,
+                        value: 691                    },
+                 {
+                        name: 'Uganda',
+                        y: 0.01,
+                        value: 679                    },
+                 {
+                        name: 'Cabo Verde',
+                        y: 0.01,
+                        value: 657                    },
+                 {
+                        name: 'Malta',
+                        y: 0.01,
+                        value: 640                    },
+                 {
+                        name: 'Sao Tome &amp; Principe',
+                        y: 0.01,
+                        value: 632                    },
+                 {
+                        name: 'Jamaica',
+                        y: 0.01,
+                        value: 605                    },
+                 {
+                        name: 'Channel Islands',
+                        y: 0.01,
+                        value: 565                    },
+                 {
+                        name: 'Yemen',
+                        y: 0.01,
+                        value: 560                    },
+                 {
+                        name: 'Togo',
+                        y: 0.01,
+                        value: 522                    },
+                 {
+                        name: 'Tanzania',
+                        y: 0.01,
+                        value: 509                    },
+                 {
+                        name: 'Mozambique',
+                        y: 0.01,
+                        value: 489                    },
+                 {
+                        name: 'R&eacute;union',
+                        y: 0.01,
+                        value: 486                    },
+                 {
+                        name: 'State of Palestine',
+                        y: 0.01,
+                        value: 485                    },
+                 {
+                        name: 'Rwanda',
+                        y: 0.01,
+                        value: 476                    },
+                 {
+                        name: 'Malawi',
+                        y: 0.01,
+                        value: 455                    },
+                 {
+                        name: 'Taiwan',
+                        y: 0.01,
+                        value: 443                    },
+                 {
+                        name: 'Liberia',
+                        y: 0.01,
+                        value: 410                    },
+                 {
+                        name: 'Eswatini',
+                        y: 0.01,
+                        value: 398                    },
+                 {
+                        name: 'Libya',
+                        y: 0.01,
+                        value: 378                    },
+                 {
+                        name: 'Mauritius',
+                        y: 0.00,
+                        value: 337                    },
+                 {
+                        name: 'Isle of Man',
+                        y: 0.00,
+                        value: 336                    },
+                 {
+                        name: 'Vietnam',
+                        y: 0.00,
+                        value: 332                    },
+                 {
+                        name: 'Montenegro',
+                        y: 0.00,
+                        value: 324                    },
+                 {
+                        name: 'Zimbabwe',
+                        y: 0.00,
+                        value: 320                    },
+                 {
+                        name: 'Benin',
+                        y: 0.00,
+                        value: 305                    },
+                 {
+                        name: 'Myanmar',
+                        y: 0.00,
+                        value: 260                    },
+                 {
+                        name: 'Martinique',
+                        y: 0.00,
+                        value: 202                    },
+                 {
+                        name: 'Mongolia',
+                        y: 0.00,
+                        value: 194                    },
+                 {
+                        name: 'Faeroe Islands',
+                        y: 0.00,
+                        value: 187                    },
+                 {
+                        name: 'Cayman Islands',
+                        y: 0.00,
+                        value: 180                    },
+                 {
+                        name: 'Gibraltar',
+                        y: 0.00,
+                        value: 176                    },
+                 {
+                        name: 'Guadeloupe',
+                        y: 0.00,
+                        value: 164                    },
+                 {
+                        name: 'Comoros',
+                        y: 0.00,
+                        value: 162                    },
+                 {
+                        name: 'Guyana',
+                        y: 0.00,
+                        value: 156                    },
+                 {
+                        name: 'Syria',
+                        y: 0.00,
+                        value: 152                    },
+                 {
+                        name: 'Suriname',
+                        y: 0.00,
+                        value: 144                    },
+                 {
+                        name: 'Brunei ',
+                        y: 0.00,
+                        value: 141                    },
+                 {
+                        name: 'Bermuda',
+                        y: 0.00,
+                        value: 141                    },
+                 {
+                        name: 'Cambodia',
+                        y: 0.00,
+                        value: 126                    },
+                 {
+                        name: 'Trinidad and Tobago',
+                        y: 0.00,
+                        value: 117                    },
+                 {
+                        name: 'Angola',
+                        y: 0.00,
+                        value: 113                    },
+                 {
+                        name: 'Bahamas',
+                        y: 0.00,
+                        value: 103                    },
+                 {
+                        name: 'Aruba',
+                        y: 0.00,
+                        value: 101                    },
+                 {
+                        name: 'Monaco',
+                        y: 0.00,
+                        value: 99                    },
+                 {
+                        name: 'Barbados',
+                        y: 0.00,
+                        value: 96                    },
+                 {
+                        name: 'Burundi',
+                        y: 0.00,
+                        value: 83                    },
+                 {
+                        name: 'Liechtenstein',
+                        y: 0.00,
+                        value: 82                    },
+                 {
+                        name: 'Sint Maarten',
+                        y: 0.00,
+                        value: 77                    },
+                 {
+                        name: 'Bhutan',
+                        y: 0.00,
+                        value: 62                    },
+                 {
+                        name: 'French Polynesia',
+                        y: 0.00,
+                        value: 60                    },
+                 {
+                        name: 'Botswana',
+                        y: 0.00,
+                        value: 48                    },
+                 {
+                        name: 'Macao',
+                        y: 0.00,
+                        value: 45                    },
+                 {
+                        name: 'Saint Martin',
+                        y: 0.00,
+                        value: 41                    },
+                 {
+                        name: 'Eritrea',
+                        y: 0.00,
+                        value: 41                    },
+                 {
+                        name: 'Namibia',
+                        y: 0.00,
+                        value: 31                    },
+                 {
+                        name: 'Gambia',
+                        y: 0.00,
+                        value: 28                    },
+                 {
+                        name: 'St. Vincent &amp; Grenadines',
+                        y: 0.00,
+                        value: 27                    },
+                 {
+                        name: 'Antigua and Barbuda',
+                        y: 0.00,
+                        value: 26                    },
+                 {
+                        name: 'Timor-Leste',
+                        y: 0.00,
+                        value: 24                    },
+                 {
+                        name: 'Grenada',
+                        y: 0.00,
+                        value: 23                    },
+                 {
+                        name: 'Cura&ccedil;ao',
+                        y: 0.00,
+                        value: 22                    },
+                 {
+                        name: 'New Caledonia',
+                        y: 0.00,
+                        value: 21                    },
+                 {
+                        name: 'Belize',
+                        y: 0.00,
+                        value: 20                    },
+                 {
+                        name: 'Laos',
+                        y: 0.00,
+                        value: 19                    },
+                 {
+                        name: 'Saint Lucia',
+                        y: 0.00,
+                        value: 19                    },
+                 {
+                        name: 'Dominica',
+                        y: 0.00,
+                        value: 18                    },
+                 {
+                        name: 'Fiji',
+                        y: 0.00,
+                        value: 18                    },
+                 {
+                        name: 'Saint Kitts &amp; Nevis',
+                        y: 0.00,
+                        value: 15                    },
+                 {
+                        name: 'Greenland',
+                        y: 0.00,
+                        value: 13                    },
+                 {
+                        name: 'Falkland Islands',
+                        y: 0.00,
+                        value: 13                    },
+                 {
+                        name: 'Holy See',
+                        y: 0.00,
+                        value: 12                    },
+                 {
+                        name: 'Turks and Caicos',
+                        y: 0.00,
+                        value: 12                    },
+                 {
+                        name: 'Seychelles',
+                        y: 0.00,
+                        value: 11                    },
+                 {
+                        name: 'Montserrat',
+                        y: 0.00,
+                        value: 11                    },
+                 {
+                        name: 'Western Sahara',
+                        y: 0.00,
+                        value: 9                    },
+                 {
+                        name: 'MS Zaandam',
+                        y: 0.00,
+                        value: 9                    },
+                 {
+                        name: 'Papua New Guinea',
+                        y: 0.00,
+                        value: 8                    },
+                 {
+                        name: 'British Virgin Islands',
+                        y: 0.00,
+                        value: 8                    },
+                 {
+                        name: 'Caribbean Netherlands',
+                        y: 0.00,
+                        value: 7                    },
+                 {
+                        name: 'Saint Barthelemy',
+                        y: 0.00,
+                        value: 6                    },
+                 {
+                        name: 'Lesotho',
+                        y: 0.00,
+                        value: 4                    },
+                 {
+                        name: 'Anguilla',
+                        y: 0.00,
+                        value: 3                    },
+                 {
+                        name: 'Saint Pierre &amp; Miquelon',
+                        y: 0.00,
+                        value: 1                    },
+                
+            ]
+        }]
+    });
+</script>
+<p> To view more detailed graphs for a specific country, <a href="statsSearch.html"> <strong> CLICK HERE </strong> </a> </p>  <br>
+<p> For more detailed resources and data about worldwide COVID-19 statistics, visit: <a href ="https://www.worldometers.info/coronavirus/"> https://www.worldometers.info/coronavirus/ </a> </p>
+</body>
+</html>
+
+

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {           
+	box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+
+</head>
+<body>
+<section id="searchpage">
+
+<h2>Country Search</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" onclick="myFunction()" title="Type in a name">
+
+<ul id="myUL">        <!-- Group-made links to be made over time, currently redirects to a site.-->
+  <li><a href="https://www.worldometers.info/coronavirus/country/afghanistan/">Afghanistan</a></li>
+
+  <li><a href="https://www.worldometers.info/coronavirus/country/albania/">Albania</a></li>
+  
+	<li><a href="https://www.worldometers.info/coronavirus/country/algeria/">Algeria</a></li>
+  <li><a href="https://www.worldometers.info/coronavirus/country/algeria/">Algerie</a></li>
+  
+	<li><a href="https://www.worldometers.info/coronavirus/country/andorra/">Andorra</a></li>
+  
+	<li><a href="https://www.worldometers.info/coronavirus/country/angola/">Angola</a></li>
+  
+	<li><a href="https://www.worldometers.info/coronavirus/country/anguilla/">Anguilla</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/antigua-and-barbuda/">Antigua and Barbuda</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/antigua-and-barbuda/">Antigua & Barbuda</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/argentina/">Argentina</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/argentina/">Argentine</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/armenia/">Armenia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/aruba/">Aruba</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/australia/">Australia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/austria/">Austria</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/azerbaijan/">Azerbaijan</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/bahamas/">Bahamas</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/bahrain/">Bahrain</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/bangladesh/">Bangladesh</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/barbados/">Barbados</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/barbados/">The Barbados</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/belarus/">Belarus</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/belgium/">Belgium</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/belgium/">Belgia</a></li>
+	
+	<li><a href="https://www.worldometers.info/coronavirus/country/belize/">Belize</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/benin/">Benin</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/bermuda/">Bermuda</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/bhutan/">Bhutan</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/bolivia/">Bolivia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/bosnia-and-herzegovina/">Bosnia and Herzegovina</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/bosnia-and-herzegovina/">Bosnia</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/bosnia-and-herzegovina/">Herzigovina</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/botswana/">Botswana</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/brazil/">Brazil</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/brazil/">Brazilia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/british-virgin-islands/">British Indian Ocean Territory</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/brunei-darussalam/">Brunei</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/brunei-darussalam/">Brunei Darussalam</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/bulgaria/">Bulgaria</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/burkina-faso/">Burkina Faso</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/burundi/">Burundi</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/cabo-verde/">Cabo Verde</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/cabo-verde/">Cape Verde</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/cambodia/">Cambodia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/cameroon/">Cameroon</a></li>
+
+	<li><a href="stat1.html">Canada</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/cayman-islands/">Cayman Islands</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/central-african-republic/">Central African Republic</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/central-african-republic/">C.A.R.</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/caribbean-netherlands/">Carribbean Netherlands</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/chad/">Chad</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/chile/">Chile</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/china/">China</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/china/">People's Republic of China</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/china/">Chine</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/colombia/">Colombia</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/colombia/">Columbia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/comoros/">Comoros</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/democratic-republic-of-the-congo/">Congo (the Democratic Republic of the)</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/democratic-republic-of-the-congo/">DRC</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/democratic-republic-of-the-congo/">The Democratic Republic of the Congo</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/democratic-republic-of-the-congo/">Democratic Congo</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/democratic-republic-of-the-congo/">DR Congo</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/democratic-republic-of-the-congo/">Congo-Kinhasa</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/congo/">Congo (the)</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/congo/">Congo</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/congo/">Congo-Brazzaville</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/congo/">Republican Congo</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/congo/">Republic of the Congo</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/costa-rica/">Costa Rica</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/croatia/">Croatia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/cuba/">Cuba</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/curacao/">Curaçao</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/cyprus/">Cyprus</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/czech-republic/">Czechia</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/czech-republic/">Czech</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/czech-republic/">Czech Republic</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/cote-d-ivoire/">Côte d'Ivoire</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/cote-d-ivoire/">Ivory Coast</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/cote-d-ivoire/">The Ivory Coast</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/cote-d-ivoire/">Republic of Côte d'Ivoire</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/denmark/">Denmark</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/denmark/">Kingdom of Denmark</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/djibouti/">Djibouti</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/dominica/">Dominica</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/dominican-republic/">Dominican Republic (the)</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/dominican-republic/">República Dominicana</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/ecuador/">Ecuador</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/ecuador/">Republic of Ecuador</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/ecuador/">Egypt</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/ecuador/">Arab Republic of Egypt</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/ecuador/">Arabian Republic of Egypt</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/el-salvador/">El Salvador</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/equatorial-guinea/">Equatorial Guinea</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/eritrea/">Eritrea</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/estonia/">Estonia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/swaziland/">Eswatini</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/swaziland/">Umbuso weSwatini</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/swaziland/">Swaizaland</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/ethiopia/">Ethiopia</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/ethiopia/">Federal Democratic Republic of Ethiopia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/falkland-islands-malvinas/">Falkland Islands (the)</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/falkland-islands-malvinas/">Malvinas</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/faeroe-islands/">Faroe Islands (the)</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/faeroe-islands/">Faeroe Islands</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/fiji/">Fiji</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/finland/">Finland</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/france/">France</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/france/">French Republic</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/french-guiana/">French Guiana</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/french-guiana/">French Guyana</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/french-polynesia/">French Polynesia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/gabon/">Gabon</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/gambia/">Gambia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/georgia/">Georgia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/germany/">Germany</a></li>
+	
+	<li><a href="https://www.worldometers.info/coronavirus/country/ghana/">Ghana</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/gibraltar/">Gibraltar</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/greece/">Greece</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/greenland/">Greenland</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/greenland/">Kalaalit Nunaat</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/greenland/">Grønland</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/grenada/">Grenada</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/guadeloupe/">Guadeloupe</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/guatemala/">Guatemala</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/guinea/">Guinea</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/guinea-bissau/">Guinea-Bissau</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/guyana/">Guyana</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/haiti/">Haiti</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/haiti/">Hayti</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/honduras/">Honduras</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/china-hong-kong-sar/">Hong Kong</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/china-hong-kong-sar/">HKSAR</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/hungary/">Hungary </a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/iceland/">Iceland</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/india/">India</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/india/">Bhārat</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/indonesia/">Indonesia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/iran/">Iran</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/iran/">Islamic Republic of Iran</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/iraq/">Iraq</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/ireland/">Ireland</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/isle-of-man/">Isle of Man</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/isle-of-man/">Mann</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/israel/">Israel</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/italy/">Italy</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/italy/">Italian Republic</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/jamaica/">Jamaica</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/japan/">Japan</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/jordan/">Jordan</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/kazakhstan/">Kazakhstan</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/kenya/">Kenya</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/south-korea/">Korea (the Republic of)</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/south-korea/">Republic of Korea</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/south-korea/">South Korea</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/south-korea/">S. Korea</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/kuwait/">Kuwait</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/kyrgyzstan/">Kyrgyzstan</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/laos/">The Lao People's Democratic Republic</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/laos/">Laos</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/latvia/">Latvia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/lebanon/">Lebanon</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/lesotho/">Lesotho</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/lesotho/">Kingdom of Lesotho</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/liberia/">Liberia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/libya/">Libya</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/liechtenstein/">Liechtenstein</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/lithuania/">Lithuania</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/luxembourg/">Luxembourg</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/luxembourg/">Grand Duchy of Luxembourg</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/luxembourg/">Luxemburg</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/luxembourg/">Lëtzebuerg</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/china-macao-sar/">Macao</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/china-macao-sar/">Macau</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/madagascar/">Madagascar</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/malawi/">Malawi</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/malaysia/">Malaysia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/maldives/">Maldives</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/mali/">Mali</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/malta/">Malta</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/martinique/">Martinique</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/mauritania/">Mauritania</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/mauritius/">Mauritius</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/mayotte/">Mayotte</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/mexico/">Mexico</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/moldova/">Moldova</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/monaco/">Monaco</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/mongolia/">Mongolia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/montenegro/">Montenegro</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/montserrat/">Montserrat</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/morocco/">Morocco</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/morocco/">Kingdom of Morocco</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/mozambique/">Mozambique</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/mozambique/">Moçambique</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/myanmar/">Myanmar</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/myanmar/">Republic of the Union of Myanmar</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/myanmar/">Burma</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/namibia/">Namibia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/nepal/">Nepal</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/netherlands/">The Netherlands</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/netherlands/">Netherlands</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/netherlands/">Holland</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/new-caledonia/">New Caledonia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/new-zealand/">New Zealand</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/nicaragua/">Nicaragua</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/niger/">Niger</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/nigeria/">Nigeria</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/macedonia/">North Macedonia</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/macedonia/">Republic of North Macedonia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/norway/">Norway</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/oman/">Oman</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/pakistan/">Pakistan</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/state-of-palestine/">Palestine, State of</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/panama/">Panama</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/papua-new-guinea/">Papua New Guinea</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/papua-new-guinea/">PNG</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/paraguay/">Paraguay</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/peru/">Peru</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/philippines/">Philippines (the)</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/philippines/">The Philippines</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/philippines/">Philippines</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/philippines/">Pilipinas</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/poland/">Poland</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/poland/">Polska</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/portugal/">Portugal</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/qatar/">Qatar</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/romania/">Romania</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/russia/">Russian Federation (the)</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/russia/">Russia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/rwanda/">Rwanda</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/rwanda/">Ruanda</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/reunion/">Réunion</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/saint-kitts-and-nevis/">Saint Kitts and Nevis</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/saint-kitts-and-nevis/">St. Kitts and Nevis</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/saint-kitts-and-nevis/">St. Kitts & Nevis</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/saint-lucia/">Saint Lucia</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/saint-lucia/">St. Lucia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/saint-martin/">Saint Martin (French part)</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/saint-martin/">St. Martin</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/saint-pierre-and-miquelon/">Saint Pierre and Miquelon</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/saint-pierre-and-miquelon/">St. Pierre and Miquelon</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/saint-pierre-and-miquelon/">St. Pierre & Miquelon</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/saint-vincent-and-the-grenadines/">Saint Vincent and the Grenadines</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/saint-vincent-and-the-grenadines/">St. Vincent Grenadines</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/san-marino/">San Marino</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/sao-tome-and-principe/">Sao Tome and Principe</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/sao-tome-and-principe/">Saint Thomas and Prince</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/sao-tome-and-principe/">Sao Tome & Principe</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/saudi-arabia/">Saudi Arabia</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/saudi-arabia/">Kingdom of Saudi Arabia</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/saudi-arabia/">KSA</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/saudi-arabia/">Arab</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/senegal/">Senegal</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/senegal/">Republic of Senegal</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/serbia/">Serbia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/seychelles/">Seychelles</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/sierra-leone/">Sierra Leone</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/singapore/">Singapore</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/sint-maarten/">Sint Maarten (Dutch part)</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/sint-maarten/">St. Maarten</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/slovakia/">Slovakia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/slovenia/">Slovenia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/somalia/">Somalia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/south-africa/">South Africa</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/south-africa/">RSA</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/south-sudan/">South Sudan</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/south-sudan/">RoSS</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/spain/">Spain</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/spain/">España</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/spain/">Kingdom of Spain</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/sri-lanka/">Sri Lanka</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/sri-lanka/">British Ceylon</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/sri-lanka/">Ceylon</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/sudan/">Sudan</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/suriname/">Suriname</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/sweden/">Sweden</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/switzerland/">Switzerland</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/syria/">Syrian Arab Republic</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/syria/">Syria</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/taiwan/">Taiwan</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/taiwan/">Republic of China</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/tajikistan/">Tajikistan</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/tanzania/">United Republic of Tanzania</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/tanzania/">Tanzania</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/thailand/">Thailand</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/thailand/">Kingdom of Thailand</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/thailand/">Siam</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/timor-leste/">Timor-Leste</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/timor-leste/">East Timor</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/togo/">Togo</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/togo/">Togolese Republic</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/trinidad-and-tobago/">Trinidad and Tobago</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/tunisia/">Tunisia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/turkey/">Turkey</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/turkey/">Türkiye</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/turks-and-caicos-islands/">Turks and Caicos Islands</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/turks-and-caicos-islands/">Turks & Caicos Islands</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/uganda/">Uganda</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/ukraine/">Ukraine</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/united-arab-emirates/">The United Arab Emirates</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/united-arab-emirates/">UAE</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/united-arab-emirates/">Emirates</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/united-arab-emirates/">United Emirates</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/uk/">United Kingdom of Great Britain and Northern Ireland (the)</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/uk/">Great Britain</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/uk/">United Kingdom</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/uk/">Britain</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/uk/">Northern Ireland</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/uk/">England</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/uk/">Wales</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/uk/">GB</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/uk/">U.K.</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/uk/">Virgin Islands (British)</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/us/">The United States of America</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/us/">The United States</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/us/">USA</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/us/">US</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/us/">The US of America</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/us/">Hawaii</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/us/">Alaska</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/us/">Puerto Rico</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/us/">Guam</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/us/">Virgin Islands (U.S.)</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/uruguay/">Uruguay</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/uzbekistan/">Uzbekistan</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/uzbekistan/">Republic of Uzbekistan</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/holy-see/">Vatican City</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/holy-see/">Holy See</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/venezuela/">Bolivarian Republic of Venezuela</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/venezuela/">Venezuela</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/viet-nam/">Viet Nam</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/viet-nam/">Vietnam</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/western-sahara/">Western Sahara</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/yemen/">Yemen</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/yemen/">Yaman</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/zambia/">Zambia</a></li>
+
+	<li><a href="https://www.worldometers.info/coronavirus/country/zimbabwe/">Zimbabwe</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/zimbabwe/">ZWE</a></li>
+	<li><a href="https://www.worldometers.info/coronavirus/country/zimbabwe/">Rhodesia</a></li>
+
+</ul>
+</section>
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+		sortList();
+}
+
+function sortList() {
+  var list, i, switching, b, shouldSwitch;
+  list = document.getElementById("myUL");
+  switching = true;
+  while (switching) {
+    switching = false;
+    b = list.getElementsByTagName("LI");
+    for (i = 0; i < (b.length - 1); i++) {
+      shouldSwitch = false;
+      if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+
+<!--<script src="statSearch.js"> </script>  -->
+</body>
+</html>

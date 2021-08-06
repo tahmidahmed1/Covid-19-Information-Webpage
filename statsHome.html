@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style> 
+* {                  
+  margin: 0;
+  padding: 0;
+}
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+.button {
+  border-radius: 8px;
+  background-color: #d1d1d1;
+  border: #000000;
+  color: #000000;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 375px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 6px 12px;
+}
+
+.button1 {
+  border-radius: 8px;
+  background-color: #2B65EC;
+  border: #000000;
+  color: #53DE31;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 6px 12px;
+}
+.button2 {
+  border-radius: 8px;
+  background-color: #F70808;
+  border: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 6px 12px;
+}
+.button3 {
+  border-radius: 8px;
+  background-color: #070E64;
+  border: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 6px 12px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button3 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button3 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+.button2:hover span {
+  padding-right: 25px;
+}
+.button3:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button3:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+section#home{
+	background: url("https://techcrunch.com/wp-content/uploads/2020/03/GettyImages-1209679043.jpg");
+  background-size: cover;
+	height: 100vh;
+}
+
+body {
+	color: white;
+}
+
+h1 {
+	padding-left: 15px;
+	padding-top: 10px;
+}
+h3 {
+	padding-left: 15px;
+}
+</style>
+
+<section id="home">
+<body>
+	<form action="index.html">
+		<button class="btn"><i class="fa fa-home"></i></button>
+	</form> <br>
+	<h1> COVID-19 NEAR YOU </h1> <br>
+	<button class="button1" onclick="location.href='stat3.html';"> <span> See Worldwide Data </span> </button> <br> 
+	<button class="button2" onclick="location.href='stat1.html';"> <span>See Canadian Data </span></button> <br> 
+	<button class="button3" onclick="location.href='stat2.html';"> <span>See Local Data</span> </button> <br> <br> <br> <br> <br> 
+
+	<h1> CHECK STATISTICS FROM OTHER COUNTRIES </h1> <br>
+ 	<button class="button" id="item1" onclick="location.href='statsSearch.html';"> <span> See data from other countries </span></button> 
+
+	<br> <br> <br>
+	<h3> Have any new Cases to report? Click the link below: <br> <a href = "https://www.worldometers.info/coronavirus/#contactModalForm" style="color:Yellow;"> <strong> https://www.worldometers.info/coronavirus/#contactModalForm </strong> </a> </h3>
+  </body>
+</section>
+
+
+</html>

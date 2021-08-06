@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding:0;
+  font-family: sans-serif;
+  background: url("https://i.imgur.com/sIaHZ9i.png");
+  background-size: cover;
+}
+.navbar {
+  position: fixed;     
+  /*Sets navbar fixed at the top no matter how far down you scroll */
+  top:0;
+  z-index: 1; 
+  /* in the z plane, the nav bar in on top of every other image.*/
+  display: flex;
+  width: 100%;
+  height: 60px;
+    background: rgba(0,0,0,0.7);
+}
+
+.navbar ul {
+  display:flex;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+}
+
+.navbar ul li {
+margin: 0 1rem;
+padding:  1rem;
+}
+
+.navbar ul li a{
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f4f4f4;
+  line-height: 0.2;
+}
+
+.navbar ul li a:hover{
+  color: skyblue;
+}
+
+.container{
+ position: relative;
+ width: 520 px;
+ height: 350 px;
+ margin: 200px ;
+}
+
+.container .box{
+  left: center;
+  position: relative;
+  width: calc(392px - 30px);
+  height: calc(350px - 30px);
+  background: #f00;
+  float: left;
+  margin: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+  
+}
+.container .box .icon{
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background:#cf2c13;
+  transition: 0.5s;
+  z-index:1;
+}
+.container .box:hover .icon{
+
+top:20px;
+left: 40.5%;
+width: 80px;
+height:80px;
+border-radius: 50%;
+}
+.container .box .icon .fa{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size:80px;
+  color:#fff;
+}
+.container .box:hover .icon .fa{
+font-size: 50px;
+}
+.container .box .content{
+  position: absolute;
+  top:100%;
+  height: calc(100%-100px);
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.container .box:hover .content{
+top:100px;
+opacity: 1;
+}
+.container .box .content h3{
+ margin: 0 0 15px;
+ padding: 0;
+ color: #fff;
+ font-size: 24px;
+}
+.container .box .content p{
+ margin: 0;
+ padding: 0;
+ color: #fff;
+}
+.container .box:nth-child(1) .icon {
+background:#6abed8;
+}
+
+.container .box:nth-child(1){
+background: #41d5fa;;
+}
+
+.container .box:nth-child(2) .icon{
+background:#ddc446;
+}
+
+.container .box:nth-child(2){
+background: #fadb41
+}
